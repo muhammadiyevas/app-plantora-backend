@@ -1,4 +1,4 @@
-package com.example.exception;
+package com.example.appplantorabackend.exception;
 
 import lombok.Builder;
 import lombok.Getter;

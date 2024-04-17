@@ -1,4 +1,4 @@
-package com.example.exception;
+package com.example.appplantorabackend.exception;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
