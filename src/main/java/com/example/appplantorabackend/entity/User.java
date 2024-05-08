@@ -48,10 +48,20 @@ public class User implements UserDetails {
     @ManyToOne
     Order orderid;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    List<Role> roles;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return roles
+                .stream()
+                .map(Role::getPermissions)
+                .flatMap(Collection::stream)
+                .distinct()
+                .map(Enum::name)
+                .map(SimpleGrantedAuthority::new)
+                .toList();
     }
 
     @Override

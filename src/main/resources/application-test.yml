@@ -1,9 +1,9 @@
 default:
   user:
-    firstname: Alisher
-    lastname: Farkhodov
+    firstname: Sevinch
+    lastname: Muhammadiyeva
     enabled: true
-    email: alisher@gmail.com
+    email: sevinch@gmail.com
     password: 1111
   language:
     name: Uzbek
